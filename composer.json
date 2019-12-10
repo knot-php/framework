@@ -1,0 +1,39 @@
+{
+  "name": "knot-php/framework",
+  "description": "Framework foundations for PHP7",
+  "keywords": ["PHP","Framework","kNot framework"],
+  "homepage": "https://github.com/knot-php/framework",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Katsuki Shuto",
+      "email": "stk2k@knot-framework.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.1",
+    "knot-lib/module": "~0.1",
+    "knot-php/command": "~0.1",
+    "knot-php/datastore-tools": "~0.1",
+    "knot-module/knot-di": "~0.1",
+    "knot-module/knot-logger": "~0.1",
+    "knot-module/knot-services": "~0.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.3.0",
+    "php-coveralls/php-coveralls": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "KnotPhp\\Framework\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "KnotPhp\\Framework\\Test\\": "test/include/",
+      "KnotPhp\\Framework\\Demo\\": "demo/include/"
+    }
+  }
+}
