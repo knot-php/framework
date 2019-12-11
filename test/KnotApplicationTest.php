@@ -20,6 +20,6 @@ final class KnotApplicationTest extends TestCase
         $app->handleException(new Exception(''));
         $out = ob_get_clean();
 
-        $this->assertSame('500 Internal Server Error', $out);
+        $this->assertSame('', $out);
     }
 }
