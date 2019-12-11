@@ -4,11 +4,12 @@ declare(strict_types=1);
 namespace KnotPhp\Framework;
 
 use KnotLib\Kernel\Module\PackageInterface;
-use KnotModule\Stk2kEventStream\Stk2kEventStreamModule;
-use KnotModule\KnotPipeline\KnotPipelineModule;
-use KnotModule\KnotLogger\KnotLoggerModule;
-use KnotModule\KnotDi\KnotDiModule;
-use KnotModule\KnotService\KnotServiceModule;
+
+use KnotPhp\Module\Stk2kEventStream\Stk2kEventStreamModule;
+use KnotPhp\Module\KnotPipeline\KnotPipelineModule;
+use KnotPhp\Module\KnotLogger\KnotLoggerModule;
+use KnotPhp\Module\KnotDi\KnotDiModule;
+use KnotPhp\Module\KnotService\KnotServiceModule;
 
 class KnotFrameworkPackage implements PackageInterface
 {

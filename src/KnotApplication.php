@@ -16,18 +16,12 @@ abstract class KnotApplication extends SimpleApplication
      * Handle exception
      *
      * @param Throwable $e
-     *
-     * @return bool
      */
-    public function handleException(Throwable $e) : bool
+    public function handleException(Throwable $e)
     {
-        if (!parent::handleException($e)){
-            self::logException($e, $this->logger());
+        parent::handleException($e);
 
-            echo '500 Internal Server Error';
-        }
-
-        return true;
+        self::logException($e, $this->logger());
     }
 
     /**
