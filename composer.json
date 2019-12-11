@@ -17,9 +17,9 @@
     "knot-lib/module": "~0.1",
     "knot-php/command": "~0.1",
     "knot-php/datastore-tools": "~0.1",
-    "knot-module/knot-di": "~0.1",
-    "knot-module/knot-logger": "~0.1",
-    "knot-module/knot-services": "~0.1"
+    "knot-php/module-knot-di": "~0.1",
+    "knot-php/module-knot-logger": "~0.1",
+    "knot-php/module-knot-services": "~0.1"
   },
   "require-dev": {
     "phpunit/phpunit": "^6.3.0",
