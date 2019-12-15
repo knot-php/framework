@@ -20,7 +20,9 @@
     "knot-php/module-knot-di": "~0.1",
     "knot-php/module-knot-logger": "~0.1",
     "knot-php/module-knot-services": "~0.1",
-    "knot-php/module-knot-http-responder": "~0.1"
+    "knot-php/module-knot-http-services": "~0.1",
+    "knot-php/module-knot-http-responder": "~0.1",
+    "knot-php/module-nyholm-psr7": "~0.1"
   },
   "require-dev": {
     "phpunit/phpunit": "^6.3.0",

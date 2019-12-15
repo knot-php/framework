@@ -5,14 +5,13 @@ namespace KnotPhp\Framework;
 
 use KnotLib\Kernel\Module\PackageInterface;
 
-use KnotPhp\Module\KnotHttpResponder\KnotHttpResponderModule;
 use KnotPhp\Module\Stk2kEventStream\Stk2kEventStreamModule;
 use KnotPhp\Module\KnotPipeline\KnotPipelineModule;
 use KnotPhp\Module\KnotLogger\KnotLoggerModule;
 use KnotPhp\Module\KnotDi\KnotDiModule;
 use KnotPhp\Module\KnotService\KnotServiceModule;
 
-class KnotFrameworkPackage implements PackageInterface
+class KnotFrameworkDefaultPackage implements PackageInterface
 {
     /**
      * Get package module list
@@ -27,7 +26,6 @@ class KnotFrameworkPackage implements PackageInterface
             KnotLoggerModule::class,
             KnotDiModule::class,
             KnotServiceModule::class,
-            KnotHttpResponderModule::class,
         ];
     }
 }
