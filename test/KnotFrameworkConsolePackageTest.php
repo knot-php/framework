@@ -3,22 +3,20 @@ declare(strict_types=1);
 
 namespace KnotPhp\Framework\Test;
 
+use KnotPhp\Framework\KnotFrameworkConsolePackage;
+use KnotPhp\Module\KnotConsole\KnotShellRequestModule;
+use KnotPhp\Module\KnotConsole\KnotShellResponderModule;
+use KnotPhp\Module\KnotConsole\KnotShellResponseModule;
+use KnotPhp\Module\KnotConsole\KnotShellRouterModule;
 use KnotPhp\Module\KnotExceptionHandler\KnotHtmlDebugExceptionHandlerModule;
-use KnotPhp\Module\KnotHttp\KnotHttpResponderModule;
-use KnotPhp\Framework\KnotFrameworkHttpPackage;
 use KnotPhp\Module\KnotDi\KnotDiModule;
-use KnotPhp\Module\KnotHttp\KnotHttpRoutingMiddlewareModule;
-use KnotPhp\Module\KnotHttpService\KnotHttpServiceModule;
 use KnotPhp\Module\KnotLogger\KnotLoggerModule;
 use KnotPhp\Module\KnotPipeline\KnotPipelineModule;
-use KnotPhp\Module\KnotRouter\KnotRouterModule;
 use KnotPhp\Module\KnotService\KnotServiceModule;
-use KnotPhp\Module\NyholmPsr7\NyholmPsr7RequestModule;
-use KnotPhp\Module\NyholmPsr7\NyholmPsr7ResponseModule;
 use KnotPhp\Module\Stk2kEventStream\Stk2kEventStreamModule;
 use PHPUnit\Framework\TestCase;
 
-final class KnotFrameworkHttpPackageTest extends TestCase
+final class KnotFrameworkConsolePackageTest extends TestCase
 {
     public function testGetModuleList()
     {
@@ -32,16 +30,12 @@ final class KnotFrameworkHttpPackageTest extends TestCase
                 KnotServiceModule::class,
                 KnotHtmlDebugExceptionHandlerModule::class,
 
-                // KnotHttpPackage
-                KnotHttpResponderModule::class,
-                KnotHttpRoutingMiddlewareModule::class,
-
-                // others
-                KnotHttpServiceModule::class,
-                NyholmPsr7RequestModule::class,
-                NyholmPsr7ResponseModule::class,
-                KnotRouterModule::class,
+                // KnotConsolePackage
+                KnotShellRequestModule::class,
+                KnotShellResponseModule::class,
+                KnotShellResponderModule::class,
+                KnotShellRouterModule::class,
             ]
-            , KnotFrameworkHttpPackage::getModuleList());
+            , KnotFrameworkConsolePackage::getModuleList());
     }
 }

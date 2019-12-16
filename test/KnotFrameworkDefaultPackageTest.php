@@ -5,6 +5,7 @@ namespace KnotPhp\Framework\Test;
 
 use KnotPhp\Framework\KnotFrameworkDefaultPackage;
 use KnotPhp\Module\KnotDi\KnotDiModule;
+use KnotPhp\Module\KnotExceptionHandler\KnotHtmlDebugExceptionHandlerModule;
 use KnotPhp\Module\KnotLogger\KnotLoggerModule;
 use KnotPhp\Module\KnotPipeline\KnotPipelineModule;
 use KnotPhp\Module\KnotService\KnotServiceModule;
@@ -22,6 +23,7 @@ final class KnotFrameworkDefaultPackageTest extends TestCase
                 KnotLoggerModule::class,
                 KnotDiModule::class,
                 KnotServiceModule::class,
+                KnotHtmlDebugExceptionHandlerModule::class,
             ]
             , KnotFrameworkDefaultPackage::getModuleList());
     }

@@ -19,6 +19,7 @@
     "knot-php/datastore-tools": "~0.1",
     "knot-php/module-knot-console": "~0.1",
     "knot-php/module-knot-di": "~0.1",
+    "knot-php/module-knot-exception-handler": "~0.1",
     "knot-php/module-knot-logger": "~0.1",
     "knot-php/module-knot-services": "~0.1",
     "knot-php/module-knot-router": "~0.1",

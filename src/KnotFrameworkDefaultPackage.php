@@ -5,6 +5,7 @@ namespace KnotPhp\Framework;
 
 use KnotLib\Kernel\Module\PackageInterface;
 
+use KnotPhp\Module\KnotExceptionHandler\KnotHtmlDebugExceptionHandlerModule;
 use KnotPhp\Module\Stk2kEventStream\Stk2kEventStreamModule;
 use KnotPhp\Module\KnotPipeline\KnotPipelineModule;
 use KnotPhp\Module\KnotLogger\KnotLoggerModule;
@@ -26,6 +27,7 @@ class KnotFrameworkDefaultPackage implements PackageInterface
             KnotLoggerModule::class,
             KnotDiModule::class,
             KnotServiceModule::class,
+            KnotHtmlDebugExceptionHandlerModule::class,
         ];
     }
 }
