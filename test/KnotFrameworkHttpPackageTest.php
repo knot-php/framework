@@ -3,12 +3,14 @@ declare(strict_types=1);
 
 namespace KnotPhp\Framework\Test;
 
+use KnotPhp\Module\KnotHttp\KnotHttpResponderModule;
 use KnotPhp\Framework\KnotFrameworkHttpPackage;
 use KnotPhp\Module\KnotDi\KnotDiModule;
-use KnotPhp\Module\KnotHttpResponder\KnotHttpResponderModule;
+use KnotPhp\Module\KnotHttp\KnotHttpRoutingMiddlewareModule;
 use KnotPhp\Module\KnotHttpService\KnotHttpServiceModule;
 use KnotPhp\Module\KnotLogger\KnotLoggerModule;
 use KnotPhp\Module\KnotPipeline\KnotPipelineModule;
+use KnotPhp\Module\KnotRouter\KnotRouterModule;
 use KnotPhp\Module\KnotService\KnotServiceModule;
 use KnotPhp\Module\NyholmPsr7\NyholmPsr7RequestModule;
 use KnotPhp\Module\NyholmPsr7\NyholmPsr7ResponseModule;
@@ -21,15 +23,22 @@ final class KnotFrameworkHttpPackageTest extends TestCase
     {
         $this->assertEquals(
             [
+                // KnotFrameworkDefaultPackage
                 Stk2kEventStreamModule::class,
                 KnotPipelineModule::class,
                 KnotLoggerModule::class,
                 KnotDiModule::class,
                 KnotServiceModule::class,
-                KnotHttpServiceModule::class,
+
+                // KnotHttpPackage
                 KnotHttpResponderModule::class,
+                KnotHttpRoutingMiddlewareModule::class,
+
+                // others
+                KnotHttpServiceModule::class,
                 NyholmPsr7RequestModule::class,
                 NyholmPsr7ResponseModule::class,
+                KnotRouterModule::class,
             ]
             , KnotFrameworkHttpPackage::getModuleList());
     }
