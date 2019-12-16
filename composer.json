@@ -15,11 +15,12 @@
   "require": {
     "php": ">=7.1",
     "knot-lib/module": "~0.1",
-    "knot-php/command": "~0.1",
-    "knot-php/datastore-tools": "~0.1",
+    "knot-php/module-knot-console": "~0.1",
     "knot-php/module-knot-di": "~0.1",
     "knot-php/module-knot-logger": "~0.1",
     "knot-php/module-knot-services": "~0.1",
+    "knot-php/module-knot-router": "~0.1",
+    "knot-php/module-knot-http": "~0.1",
     "knot-php/module-knot-http-services": "~0.1",
     "knot-php/module-knot-http-responder": "~0.1",
     "knot-php/module-nyholm-psr7": "~0.1"

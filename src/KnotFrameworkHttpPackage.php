@@ -5,8 +5,9 @@ namespace KnotPhp\Framework;
 
 use KnotLib\Kernel\Module\PackageInterface;
 
-use KnotPhp\Module\KnotHttpResponder\KnotHttpResponderModule;
+use KnotPhp\Module\KnotConsole\Package\KnotHttpPackage;
 use KnotPhp\Module\KnotHttpService\KnotHttpServiceModule;
+use KnotPhp\Module\KnotRouter\KnotRouterModule;
 use KnotPhp\Module\NyholmPsr7\NyholmPsr7RequestModule;
 use KnotPhp\Module\NyholmPsr7\NyholmPsr7ResponseModule;
 
@@ -19,12 +20,14 @@ class KnotFrameworkHttpPackage implements PackageInterface
      */
     public static function getModuleList() : array
     {
-        return array_merge(KnotFrameworkDefaultPackage::getModuleList(),
+        return array_merge(
+            KnotFrameworkDefaultPackage::getModuleList(),
+            KnotHttpPackage::getModuleList(),
             [
                 KnotHttpServiceModule::class,
-                KnotHttpResponderModule::class,
                 NyholmPsr7RequestModule::class,
                 NyholmPsr7ResponseModule::class,
+                KnotRouterModule::class,
             ]);
     }
 }
