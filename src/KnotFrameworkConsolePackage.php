@@ -5,7 +5,7 @@ namespace KnotPhp\Framework;
 
 use KnotLib\Kernel\Module\PackageInterface;
 
-use KnotPhp\Module\KnotConsole\Package\KnotConsolePackage;
+use KnotPhp\Module\KnotConsole\Package\KnotArrayConfigConsolePackage;
 
 class KnotFrameworkConsolePackage implements PackageInterface
 {
@@ -18,7 +18,7 @@ class KnotFrameworkConsolePackage implements PackageInterface
     {
         return array_merge(
             KnotFrameworkDefaultPackage::getModuleList(),
-            KnotConsolePackage::getModuleList()
+            KnotArrayConfigConsolePackage::getModuleList()
         );
     }
 }
