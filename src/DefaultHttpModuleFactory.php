@@ -28,9 +28,9 @@ final class DefaultHttpModuleFactory implements ModuleFactoryInterface
 
         $new_rules = [];
         foreach($routing_rule as $key => $config){
-            $new_config[$key] = $config;
-            $new_config['/index.php' . $key] = $config;
-            $new_config['/index-dev.php' . $key] = $config;
+            $new_rules[$key] = $config;
+            $new_rules['/index.php' . $key] = $config;
+            $new_rules['/index-dev.php' . $key] = $config;
         }
 
         $this->routing_rule = $new_rules;
