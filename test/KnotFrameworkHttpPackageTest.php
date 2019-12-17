@@ -11,7 +11,7 @@ use KnotPhp\Module\KnotHttp\KnotHttpRoutingMiddlewareModule;
 use KnotPhp\Module\KnotHttpService\KnotHttpServiceModule;
 use KnotPhp\Module\KnotLogger\KnotLoggerModule;
 use KnotPhp\Module\KnotPipeline\KnotPipelineModule;
-use KnotPhp\Module\KnotRouter\KnotRouterModule;
+use KnotPhp\Module\KnotRouter\ArrayConfigKnotRouterModule;
 use KnotPhp\Module\KnotService\KnotServiceModule;
 use KnotPhp\Module\NyholmPsr7\NyholmPsr7RequestModule;
 use KnotPhp\Module\NyholmPsr7\NyholmPsr7ResponseModule;
@@ -40,7 +40,7 @@ final class KnotFrameworkHttpPackageTest extends TestCase
                 KnotHttpServiceModule::class,
                 NyholmPsr7RequestModule::class,
                 NyholmPsr7ResponseModule::class,
-                KnotRouterModule::class,
+                ArrayConfigKnotRouterModule::class,
             ]
             , KnotFrameworkHttpPackage::getModuleList());
     }
