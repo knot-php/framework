@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace KnotPhp\Framework\Test;
 
-use KnotPhp\Framework\KnotFrameworkDefaultPackage;
+use KnotPhp\Framework\Package\KnotFrameworkDefaultPackage;
 use KnotPhp\Module\KnotDi\KnotDiModule;
 use KnotPhp\Module\KnotExceptionHandler\KnotHtmlDebugExceptionHandlerModule;
 use KnotPhp\Module\KnotLogger\KnotLoggerModule;

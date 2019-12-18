@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace KnotPhp\Framework\Test;
 
+use KnotPhp\Framework\Package\KnotFrameworkHttpPackage;
 use KnotPhp\Module\KnotExceptionHandler\KnotHtmlDebugExceptionHandlerModule;
 use KnotPhp\Module\KnotHttp\KnotHttpResponderModule;
-use KnotPhp\Framework\KnotFrameworkHttpPackage;
 use KnotPhp\Module\KnotDi\KnotDiModule;
 use KnotPhp\Module\KnotHttp\KnotHttpRoutingMiddlewareModule;
 use KnotPhp\Module\KnotHttpService\KnotHttpServiceModule;

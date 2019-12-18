@@ -8,16 +8,16 @@ use Exception;
 use KnotPhp\Framework\DefaultFileSystem;
 use PHPUnit\Framework\TestCase;
 
-final class KnotApplicationTest extends TestCase
+final class KnotBaseApplicationTest extends TestCase
 {
     public function testHandleException()
     {
         $fs = new DefaultFileSystem(__DIR__);
-        $app = new TestApplication($fs);
+        $app = new ConcreteKnotBaseApplication($fs);
 
         // check std output
         ob_start();
-        $app->handleException(new Exception(''));
+        $app->handleException(new Exception('foo'));
         $out = ob_get_clean();
 
         $this->assertSame('', $out);

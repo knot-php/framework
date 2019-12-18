@@ -3,10 +3,8 @@ declare(strict_types=1);
 
 namespace KnotPhp\Framework\Test;
 
-use KnotPhp\Framework\KnotFrameworkConsolePackage;
+use KnotPhp\Framework\Package\KnotFrameworkConsolePackage;
 use KnotPhp\Module\KnotConsole\ArrayConfigShellRouterModule;
-use KnotPhp\Module\KnotConsole\Package\KnotArrayConfigConsolePackage;
-use KnotPhp\Module\KnotConsole\Package\KnotDefaultConsolePackage;
 use KnotPhp\Module\KnotConsole\ShellRequestModule;
 use KnotPhp\Module\KnotConsole\ShellResponderModule;
 use KnotPhp\Module\KnotConsole\ShellResponseModule;

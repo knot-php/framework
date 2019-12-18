@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace KnotPhp\Framework;
+namespace KnotPhp\Framework\Application;
 
 use Throwable;
 
@@ -10,7 +10,7 @@ use Stk2k\Util\Util;
 
 use KnotLib\Module\Application\SimpleApplication;
 
-abstract class KnotApplication extends SimpleApplication
+abstract class KnotBaseApplication extends SimpleApplication
 {
     /**
      * Handle exception

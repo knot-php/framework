@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace KnotPhp\Framework;
+namespace KnotPhp\Framework\Package;
 
 use KnotLib\Kernel\Module\PackageInterface;
 
