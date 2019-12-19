@@ -14,26 +14,18 @@ final class DefaultHttpModuleFactory implements ModuleFactoryInterface
     private $dispatcher;
 
     /** @var array */
-    private $routing_rule;
+    private $routing_rules;
 
     /**
      * DefaultHttpModuleFactory constructor.
      *
      * @param DispatcherInterface $dispatcher
-     * @param array $routing_rule
+     * @param array $routing_rules
      */
-    public function __construct(DispatcherInterface $dispatcher, array $routing_rule)
+    public function __construct(DispatcherInterface $dispatcher, array $routing_rules)
     {
         $this->dispatcher = $dispatcher;
-
-        $new_rules = [];
-        foreach($routing_rule as $key => $config){
-            $new_rules[$key] = $config;
-            $new_rules['/index.php' . $key] = $config;
-            $new_rules['/index-dev.php' . $key] = $config;
-        }
-
-        $this->routing_rule = $new_rules;
+        $this->routing_rules = $routing_rules;
     }
 
     /**
@@ -42,7 +34,7 @@ final class DefaultHttpModuleFactory implements ModuleFactoryInterface
     public function createModule(string $module_class, ApplicationInterface $app)
     {
         if ($module_class === ArrayConfigKnotRouterModule::class){
-            return new ArrayConfigKnotRouterModule($this->dispatcher,$this->routing_rule);
+            return new ArrayConfigKnotRouterModule($this->dispatcher,$this->routing_rules);
         }
         return null;
     }
