@@ -31,7 +31,20 @@ abstract class KnotHttpApplication extends KnotBaseApplication
      *
      * @return DispatcherInterface
      */
-    public abstract function getDispatcher() : DispatcherInterface;
+    protected abstract function getDispatcher() : DispatcherInterface;
+
+    /**
+     * Returns routing rules
+     *
+     * @return array
+     */
+    protected function getRoutingRules() : array
+    {
+        $route_config = $this->filesystem()->getFile(Dir::CONFIG, 'route.config.php');
+
+        /** @noinspection PhpIncludeInspection */
+        return require ($route_config);
+    }
 
     /**
      * Configure application
@@ -43,12 +56,7 @@ abstract class KnotHttpApplication extends KnotBaseApplication
         $this->requirePackage(KnotFrameworkHttpPackage::class);
         $this->requireModule(AuraSessionModule::class);
 
-        $route_config = $this->filesystem()->getFile(Dir::CONFIG, 'route.config.php');
-
-        /** @noinspection PhpIncludeInspection */
-        $routing_rule = require ($route_config);
-
-        $this->addModuleFactory(new DefaultHttpModuleFactory($this->getDispatcher(), $routing_rule));
+        $this->addModuleFactory(new DefaultHttpModuleFactory($this->getDispatcher(), $this->getRoutingRules()));
 
         return $this;
     }

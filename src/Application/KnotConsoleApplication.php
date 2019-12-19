@@ -31,7 +31,20 @@ abstract class KnotConsoleApplication extends KnotBaseApplication
      *
      * @return ShellDispatcherInterface
      */
-    public abstract function getDispatcher() : ShellDispatcherInterface;
+    protected abstract function getDispatcher() : ShellDispatcherInterface;
+
+    /**
+     * Returns routing rules
+     *
+     * @return array
+     */
+    protected function getRoutingRules() : array
+    {
+        $route_config = $this->filesystem()->getFile(Dir::CONFIG, 'route.config.php');
+
+        /** @noinspection PhpIncludeInspection */
+        return require ($route_config);
+    }
 
     /**
      * Configure application
@@ -43,12 +56,7 @@ abstract class KnotConsoleApplication extends KnotBaseApplication
         $this->requirePackage(KnotFrameworkConsolePackage::class);
         $this->requireModule(AuraSessionModule::class);
 
-        $route_config = $this->filesystem()->getFile(Dir::CONFIG, 'route.config.php');
-
-        /** @noinspection PhpIncludeInspection */
-        $routing_rule = require ($route_config);
-
-        $this->addModuleFactory(new DefaultConsoleModuleFactory($this->getDispatcher(), $routing_rule));
+        $this->addModuleFactory(new DefaultConsoleModuleFactory($this->getDispatcher(), $this->getRoutingRules()));
 
         return $this;
     }
