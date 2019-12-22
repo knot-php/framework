@@ -5,7 +5,7 @@ namespace KnotPhp\Framework;
 
 use KnotPhp\Command\Command\CommandDescriptorProviderInterface;
 use KnotPhp\Command\Command\Provider\AcmeCommandProvider;
-use KnotPhp\DataStore\Tools\Command\Provider\DataStoreToolsCommandProvider;
+use KnotPhp\DataStoreTools\Command\Provider\DataStoreToolsCommandProvider;
 
 final class KnotCommandProvider implements CommandDescriptorProviderInterface
 {

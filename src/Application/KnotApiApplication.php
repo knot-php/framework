@@ -58,7 +58,7 @@ abstract class KnotApiApplication extends KnotBaseApplication
 
         $this->addModuleFactory(new DefaultHttpModuleFactory($this->getDispatcher(), $this->getRoutingRules()));
 
-        return $this;
+        return parent::configure();
     }
 
     /**

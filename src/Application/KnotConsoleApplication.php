@@ -58,7 +58,7 @@ abstract class KnotConsoleApplication extends KnotBaseApplication
 
         $this->addModuleFactory(new DefaultConsoleModuleFactory($this->getDispatcher(), $this->getRoutingRules()));
 
-        return $this;
+        return parent::configure();
     }
 
     /**
