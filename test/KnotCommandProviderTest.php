@@ -27,6 +27,7 @@ final class KnotCommandProviderTest extends TestCase
             //-------------------------------
             // datastore-tools commands
             //-------------------------------
+            'module:dependency:explain',
             'db:describe:table',
             'db:generate:model',
             'db:generate:repository',
