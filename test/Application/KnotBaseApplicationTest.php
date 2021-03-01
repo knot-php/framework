@@ -1,12 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace KnotPhp\Framework\Test;
+namespace KnotPhp\Framework\Test\Application;
 
 use Exception;
 
 use KnotPhp\Framework\DefaultFileSystem;
 use PHPUnit\Framework\TestCase;
+use KnotPhp\Framework\Test\ConcreteKnotBaseApplication;
 
 final class KnotBaseApplicationTest extends TestCase
 {

@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace KnotPhp\Framework\Test;
+namespace KnotPhp\Framework\Test\Package;
 
 use KnotPhp\Framework\Package\KnotFrameworkDefaultPackage;
 use KnotPhp\Module\KnotDi\KnotDiModule;
-use KnotPhp\Module\KnotExceptionHandler\KnotHtmlDebugExceptionHandlerModule;
+use KnotPhp\Module\KnotExceptionHandler\Html\HtmlExceptionHandlerModule;
 use KnotPhp\Module\KnotLogger\KnotLoggerModule;
 use KnotPhp\Module\KnotPipeline\KnotPipelineModule;
 use KnotPhp\Module\KnotService\KnotServiceModule;
@@ -23,7 +23,6 @@ final class KnotFrameworkDefaultPackageTest extends TestCase
                 KnotLoggerModule::class,
                 KnotDiModule::class,
                 KnotServiceModule::class,
-                KnotHtmlDebugExceptionHandlerModule::class,
             ]
             , KnotFrameworkDefaultPackage::getModuleList());
     }

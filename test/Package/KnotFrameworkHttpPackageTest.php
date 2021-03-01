@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace KnotPhp\Framework\Test;
+namespace KnotPhp\Framework\Test\Package;
 
 use KnotPhp\Framework\Package\KnotFrameworkHttpPackage;
-use KnotPhp\Module\KnotExceptionHandler\KnotHtmlDebugExceptionHandlerModule;
+use KnotPhp\Module\KnotExceptionHandler\Html\HtmlExceptionHandlerModule;
 use KnotPhp\Module\KnotHttp\KnotHttpResponderModule;
 use KnotPhp\Module\KnotDi\KnotDiModule;
 use KnotPhp\Module\KnotHttp\KnotHttpRoutingMiddlewareModule;
@@ -30,17 +30,17 @@ final class KnotFrameworkHttpPackageTest extends TestCase
                 KnotLoggerModule::class,
                 KnotDiModule::class,
                 KnotServiceModule::class,
-                KnotHtmlDebugExceptionHandlerModule::class,
 
                 // KnotHttpPackage
                 KnotHttpResponderModule::class,
                 KnotHttpRoutingMiddlewareModule::class,
 
-                // others
+                // KnotFrameworkHttpPackage
                 KnotHttpServiceModule::class,
                 NyholmPsr7RequestModule::class,
                 NyholmPsr7ResponseModule::class,
                 ArrayConfigKnotRouterModule::class,
+                HtmlExceptionHandlerModule::class,
             ]
             , KnotFrameworkHttpPackage::getModuleList());
     }

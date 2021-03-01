@@ -20,6 +20,7 @@
     "knot-php/module-knot-console": "~0.1",
     "knot-php/module-knot-di": "~0.1",
     "knot-php/module-knot-exception-handler": "~0.1",
+    "knot-php/module-knot-exception-handler-html": "~0.1",
     "knot-php/module-knot-logger": "~0.1",
     "knot-php/module-knot-services": "~0.1",
     "knot-php/module-knot-router": "~0.1",
@@ -40,8 +41,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "KnotPhp\\Framework\\Test\\": "test/include/",
-      "KnotPhp\\Framework\\Demo\\": "demo/include/"
+      "KnotPhp\\Framework\\Test\\": "test/"
     }
   }
 }

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace KnotPhp\Framework\Test;
+namespace KnotPhp\Framework\Test\Package;
 
 use KnotPhp\Framework\Package\KnotFrameworkConsolePackage;
 use KnotPhp\Module\KnotConsole\ArrayConfigShellRouterModule;
@@ -9,8 +9,8 @@ use KnotPhp\Module\KnotConsole\ShellRequestModule;
 use KnotPhp\Module\KnotConsole\ShellResponderModule;
 use KnotPhp\Module\KnotConsole\ShellResponseModule;
 use KnotPhp\Module\KnotConsole\ShellRoutingMiddlewareModule;
-use KnotPhp\Module\KnotExceptionHandler\KnotHtmlDebugExceptionHandlerModule;
 use KnotPhp\Module\KnotDi\KnotDiModule;
+use KnotPhp\Module\KnotExceptionHandler\TextExceptionHandlerModule;
 use KnotPhp\Module\KnotLogger\KnotLoggerModule;
 use KnotPhp\Module\KnotPipeline\KnotPipelineModule;
 use KnotPhp\Module\KnotService\KnotServiceModule;
@@ -29,7 +29,6 @@ final class KnotFrameworkConsolePackageTest extends TestCase
                 KnotLoggerModule::class,
                 KnotDiModule::class,
                 KnotServiceModule::class,
-                KnotHtmlDebugExceptionHandlerModule::class,
 
                 // KnotDefaultConsolePackage
                 ShellRequestModule::class,
@@ -39,6 +38,9 @@ final class KnotFrameworkConsolePackageTest extends TestCase
 
                 // KnotArrayConfigConsolePackage
                 ArrayConfigShellRouterModule::class,
+
+                // KnotFrameworkConsolePackage
+                TextExceptionHandlerModule::class,
             ]
             , KnotFrameworkConsolePackage::getModuleList());
     }
