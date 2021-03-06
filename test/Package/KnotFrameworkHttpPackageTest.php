@@ -40,7 +40,6 @@ final class KnotFrameworkHttpPackageTest extends TestCase
                 NyholmPsr7RequestModule::class,
                 NyholmPsr7ResponseModule::class,
                 ArrayConfigKnotRouterModule::class,
-                HtmlExceptionHandlerModule::class,
             ]
             , KnotFrameworkHttpPackage::getModuleList());
     }

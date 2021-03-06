@@ -18,7 +18,7 @@ class KnotFrameworkConsolePackage implements PackageInterface
     {
         return array_merge(
             KnotFrameworkDefaultPackage::getModuleList(),
-            KnotArrayConfigConsolePackage::getModuleList(),
+            KnotArrayConfigConsolePackage::getModuleList()
         );
     }
 }

@@ -39,8 +39,6 @@ final class KnotFrameworkConsolePackageTest extends TestCase
                 // KnotArrayConfigConsolePackage
                 ArrayConfigShellRouterModule::class,
 
-                // KnotFrameworkConsolePackage
-                TextExceptionHandlerModule::class,
             ]
             , KnotFrameworkConsolePackage::getModuleList());
     }
