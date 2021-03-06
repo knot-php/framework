@@ -20,9 +20,6 @@ class KnotFrameworkConsolePackage implements PackageInterface
         return array_merge(
             KnotFrameworkDefaultPackage::getModuleList(),
             KnotArrayConfigConsolePackage::getModuleList(),
-            [
-                TextExceptionHandlerModule::class,
-            ]
         );
     }
 }

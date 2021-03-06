@@ -29,7 +29,6 @@ class KnotFrameworkHttpPackage implements PackageInterface
                 NyholmPsr7RequestModule::class,
                 NyholmPsr7ResponseModule::class,
                 ArrayConfigKnotRouterModule::class,
-                HtmlExceptionHandlerModule::class,
             ]);
     }
 }
