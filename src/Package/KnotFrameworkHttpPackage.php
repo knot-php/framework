@@ -5,7 +5,6 @@ namespace KnotPhp\Framework\Package;
 
 use KnotLib\Kernel\Module\PackageInterface;
 
-use KnotPhp\Module\KnotExceptionHandler\Html\HtmlExceptionHandlerModule;
 use KnotPhp\Module\KnotHttp\Package\KnotHttpPackage;
 use KnotPhp\Module\KnotHttpService\KnotHttpServiceModule;
 use KnotPhp\Module\KnotRouter\ArrayConfigKnotRouterModule;
