@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace KnotPhp\Framework\Test\Package;
 
 use KnotPhp\Framework\Package\KnotFrameworkHttpPackage;
-use KnotPhp\Module\KnotExceptionHandler\Html\HtmlExceptionHandlerModule;
 use KnotPhp\Module\KnotHttp\KnotHttpResponderModule;
 use KnotPhp\Module\KnotDi\KnotDiModule;
 use KnotPhp\Module\KnotHttp\KnotHttpRoutingMiddlewareModule;

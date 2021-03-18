@@ -10,7 +10,6 @@ use KnotPhp\Module\KnotConsole\ShellResponderModule;
 use KnotPhp\Module\KnotConsole\ShellResponseModule;
 use KnotPhp\Module\KnotConsole\ShellRoutingMiddlewareModule;
 use KnotPhp\Module\KnotDi\KnotDiModule;
-use KnotPhp\Module\KnotExceptionHandler\TextExceptionHandlerModule;
 use KnotPhp\Module\KnotLogger\KnotLoggerModule;
 use KnotPhp\Module\KnotPipeline\KnotPipelineModule;
 use KnotPhp\Module\KnotService\KnotServiceModule;

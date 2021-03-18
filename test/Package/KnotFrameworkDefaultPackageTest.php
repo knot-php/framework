@@ -5,7 +5,6 @@ namespace KnotPhp\Framework\Test\Package;
 
 use KnotPhp\Framework\Package\KnotFrameworkDefaultPackage;
 use KnotPhp\Module\KnotDi\KnotDiModule;
-use KnotPhp\Module\KnotExceptionHandler\Html\HtmlExceptionHandlerModule;
 use KnotPhp\Module\KnotLogger\KnotLoggerModule;
 use KnotPhp\Module\KnotPipeline\KnotPipelineModule;
 use KnotPhp\Module\KnotService\KnotServiceModule;
