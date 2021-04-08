@@ -34,7 +34,7 @@ Yet another glue framework for PHP7
 
 ## Requirement
 
-PHP 7.1 or later
+PHP 7.3 or later
 
 ## Installing knot-php/framework
 
