@@ -7,3 +7,4 @@ coverage/*
 logs/*
 sample/cache/*
 sample/.htaccess
+.phpunit.result.cache
